@@ -73,6 +73,7 @@ li{
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 .text--purple{
@@ -95,7 +96,8 @@ nav{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
+    padding: 0 12px; 
 }
 
 .nav__link--list{
@@ -225,6 +227,7 @@ nav{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .language__name{
@@ -376,4 +379,66 @@ footer{
 .footer__anchor:hover .footer__logo--popper{
     transform: translateX(60px);
     opacity: 1;
+}
+
+/*Small phones, tablets, and large smart phones*/
+
+@media (max-width: 768px){
+    nav{
+        height: 68px;
+    }
+
+    h1{
+        font-size: 28px;
+    }
+
+    .about-me__para{
+        font-size: 18px;
+    }
+
+    .language{
+        width: calc(100% / 2);
+    }
+
+    .project__description--para{
+        font-size: 14px;
+    }
+
+    .project__description{
+        left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/*Small phones*/
+@media (max-width: 480px){
+    .nav__link:not(:last-child){
+        display: none;
+    }
+
+    .project__description{
+        padding: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .project__description--para{
+        display: none;
+    }
+
+    .project__description--links{
+        display: flex;
+        justify-content: center;
+    }
+
+    .project__description--title{
+        font-size: 32px;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .project__description--sub-title{
+        text-align: center;
+        margin: 12px 0;
+    }
 }
